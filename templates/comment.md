@@ -9,5 +9,7 @@ Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub A
 | <% test.metrics.forEach((metric) => { %>--- | <% }); %>
 | <% test.metrics.forEach((metric) => { %><%- metric.value %> | <% }); %>
 
+<% if (test.show_waterfall) { %>
 ![Image of waterfall](<%- test.waterfall %>)
+<% } %>
 <% }); %>
