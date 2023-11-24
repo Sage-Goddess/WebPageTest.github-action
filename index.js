@@ -88,12 +88,9 @@ function collectData(results, runData) {
   let testData = {
     url: results.data.url,
     testLink: results.data.summary,
-    // waterfall: results.data.median.firstView.images.waterfall,
-    waterfall: '',
+    waterfall: results.data.median.firstView.images.waterfall,
     metrics: [],
   };
-  core.debug('what does runData look like?');
-  core.debug(runData);
   for (const [key, value] of Object.entries(METRICS)) {
     core.debug(key);
     core.debug(value);
