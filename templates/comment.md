@@ -1,6 +1,9 @@
 # WebPageTest Test Results
 Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub Action.
 
+## Budget Specs
+firstContentfulPaint: <%- test.specs.median.firstView.firstContentfulPaint %>
+
 <% tests.forEach((test) => { %>
 ## Page Tested:<%- test.url %>
 **Full test results: <%- test.testLink %>**
