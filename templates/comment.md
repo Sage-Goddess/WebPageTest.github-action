@@ -5,8 +5,10 @@ Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub A
 ## Page Tested:<%- test.url %>
 **Full test results: <%- test.testLink %>**
 ### Budget Specs
-firstContentfulPaint: <%- test.median.firstView.firstContentfulPaint %>
-firstContentfulPaint: <%- test.specs.median.firstView.firstContentfulPaint %>
+
+<% test.specs.median.firstView.forEach((firstView) => { %>
+ <%- firstView.name %>: <%- firstView.value %>
+}); %>
 
 | <% test.metrics.forEach((metric) => { %><%- metric.name %> | <% }); %>
 | <% test.metrics.forEach((metric) => { %>--- | <% }); %>
