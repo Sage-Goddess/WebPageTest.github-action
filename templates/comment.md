@@ -4,11 +4,12 @@ Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub A
 <% tests.forEach((test) => { %>
 ## Page Tested:<%- test.url %>
 **Full test results: <%- test.testLink %>**
-### Budget Specs
 
-<% test.specs.median.firstView.forEach((firstView) => { %>
- <%- firstView.name %>: <%- firstView.value %>
-}); %>
+### Budget Specs
+<% test.specs.median.firstView.forEach((budgets) => { %>
+  <%- budgets.name %> : <%- budgets.value %> 
+  
+<% }); %>
 
 | <% test.metrics.forEach((metric) => { %><%- metric.name %> | <% }); %>
 | <% test.metrics.forEach((metric) => { %>--- | <% }); %>
