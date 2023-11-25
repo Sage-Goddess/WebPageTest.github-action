@@ -6,7 +6,7 @@ Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub A
 **Full test results: <%- test.testLink %>**
 
 ### Budget Specs
-<% test.specs.median.firstView.forEach((budgets) => { %>
+<% test.median.firstView.forEach((budgets) => { %>
   <%- budgets.name %> : <%- budgets.value %> 
   
 <% }); %>
