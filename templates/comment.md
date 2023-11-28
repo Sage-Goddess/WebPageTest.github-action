@@ -10,13 +10,21 @@ Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub A
 | <% test.metrics.forEach((metric) => { %><%- metric.value %> | <% }); %>
 
 <% if (test.show_waterfall) { %>
+<details>
+    <summary>View Waterfall</summary>
+
 ![Image of waterfall](<%- test.waterfall %>)
+</details>
 <% } %>
 
 ## Budget Specs Set - wpt-budget.json
 * Based off Staging Averages
 * Reference: https://docs.webpagetest.org/metrics/page-metrics/
 * Schema Ref: https://gist.github.com/Nooshu/ff463b3cbc95ffe75da16224cb217fd5
+
+<details>
+  <summary><i>View Ranged Budgets</i></summary>
+
 ```json
 {
   "median": {
@@ -66,4 +74,6 @@ Automatically triggered by [WebPageTest](https://www.webpagetest.org)'s GitHub A
 }
 
 ```
+</details>
+
 <% }); %>
